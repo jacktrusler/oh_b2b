@@ -1,0 +1,63 @@
+package templates
+
+templ Index(
+	title string,
+	bodyContent templ.Component) {
+	<!DOCTYPE html>
+	<html lang="en" class="no-js">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<link rel="preconnect" href="https://fonts.googleapis.com"/>
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+			<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet"/>
+			<title>Ohio B2B</title>
+			<script type="module">
+    document.documentElement.classList.remove('no-js');
+    document.documentElement.classList.add('js');
+  </script>
+			<link rel="stylesheet" href="/public/output.css"/>
+			<meta name="keywords" content="B2Bin"/>
+			<meta name="description" content="It's time to B2 b2b2b2b2 B"/>
+			<!-- OpenGraph Meta -->
+			<meta property="og:title" content="B2Bizzle"/>
+			<meta property="og:description" content="Serious Business"/>
+			<meta property="og:image" content=""/>
+			<meta property="og:image:secure_url" content=""/>
+			<meta property="og:image:type" content="image/png"/>
+			<meta property="og:image:width" content="400"/>
+			<meta property="og:image:height" content="300"/>
+			<meta property="og:image:alt" content="something"/>
+			<meta property="og:locale" content="en_US"/>
+			<meta property="og:type" content="website"/>
+			<meta property="og:url" content="b2bizzle.com"/>
+			<!-- <meta name="twitter:card" content="summary_large_image"> -->
+			<!-- <meta name="twitter:image" content="images/landing_page/stallman_background_dark.png"> -->
+			<link rel="canonical" href="b2bizzle.com"/>
+			<link rel="icon" href="/public/assets/b2blogo.png" type="image/svg+xml"/>
+			<link rel="apple-touch-icon" href="images/landing_page/alug2.svg"/>
+			<meta name="theme-color" content="#FF00FF"/>
+		</head>
+		<body>
+			<header class="flex justify-around items-center">
+				<div class="w-10">
+					<img src="/public/assets/b2blogo.png" alt="b2b logo"/>
+				</div>
+				<div class="flex gap-4">
+					<div>Products</div>
+					<div>Location</div>
+					<div>Contact</div>
+				</div>
+			</header>
+			<section class="px-8 md:px-12 lg-px-16 py-24">
+				<!-- Where you import content -->
+				@bodyContent
+			</section>
+			<footer>
+				<hr/>
+				<div>Ohio B2Bizzle</div>
+			</footer>
+			<script src="/public/scripts.js"></script>
+		</body>
+	</html>
+}

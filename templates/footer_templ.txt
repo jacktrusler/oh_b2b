@@ -1,0 +1,1 @@
+<header><img src=\"/public/assets/b2blogo.png\" alt=\"b2b logo\"></header>
