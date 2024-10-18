@@ -610,6 +610,36 @@ select {
   outline: 1px auto -webkit-focus-ring-color;
 }
 
+:root {
+  --color-bkg: 210 40% 98%;
+  --color-content: 217 32.6% 17.5%;
+  --color-accent1: 288 95.8% 90.6%;
+  --color-accent2: 168 83.8% 78.2%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bkg: 217 32.6% 17.5%;
+    --color-content: 210 40% 98%;
+    --color-accent1: 288 95.8% 60.6%;
+    --color-accent2: 168 83.8% 48.2%;
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-bkg: 217 32.6% 17.5%;
+  --color-content: 210 40% 98%;
+  --color-accent1: 288 95.8% 60.6%;
+  --color-accent2: 168 83.8% 48.2%;
+}
+
+:root[data-theme="light"] {
+  --color-bkg: 210 40% 98%;
+  --color-content: 217 32.6% 17.5%;
+  --color-accent1: 288 95.8% 60.6%;
+  --color-accent2: 168 83.8% 48.2%;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -714,8 +744,16 @@ select {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-20 {
   height: 5rem;
+}
+
+.min-h-\[90vh\] {
+  min-height: 90vh;
 }
 
 .w-10 {
@@ -730,8 +768,16 @@ select {
   width: 100%;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .items-center {
   align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .justify-around {
@@ -742,14 +788,29 @@ select {
   gap: 1rem;
 }
 
+.bg-bkg {
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--color-bkg) / var(--tw-bg-opacity));
+}
+
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-blue-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
+}
+
 .bg-pink-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(236 72 153 / var(--tw-bg-opacity));
+}
+
+.bg-red-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 
 .px-8 {
@@ -760,6 +821,24 @@ select {
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-content {
+  --tw-text-opacity: 1;
+  color: hsl(var(--color-content) / var(--tw-text-opacity));
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 @media (min-width: 768px) {

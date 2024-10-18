@@ -12,9 +12,13 @@ func main() {
 	// Start Echo server
 	e := echo.New()
 	e.Static("/public", "public")
-	content := templates.Index("something", pages.BodyContent())
 	// Define template body content.
 	e.GET("/", func(c echo.Context) error {
+		content := templates.Index("something", pages.Home())
+		return cmd.Render(c, 200, content)
+	})
+	e.GET("/lmao", func(c echo.Context) error {
+		content := templates.Index("something", pages.Lmao())
 		return cmd.Render(c, 200, content)
 	})
 

@@ -34,27 +34,69 @@ templ Index(
 			<!-- <meta name="twitter:card" content="summary_large_image"> -->
 			<!-- <meta name="twitter:image" content="images/landing_page/stallman_background_dark.png"> -->
 			<link rel="canonical" href="b2bizzle.com"/>
-			<link rel="icon" href="/public/assets/b2blogo.png" type="image/svg+xml"/>
+			<link rel="icon" href="/public/assets/b2blight.png" type="image/svg+xml"/>
 			<link rel="apple-touch-icon" href="images/landing_page/alug2.svg"/>
 			<meta name="theme-color" content="#FF00FF"/>
 		</head>
-		<body>
+		<body class="bg-bkg text-content">
 			<header class="flex justify-around items-center">
-				<div class="w-10">
-					<img src="/public/assets/b2blogo.png" alt="b2b logo"/>
-				</div>
+				<a href="/" id="logo" class="w-10">
+					<img id="logo-pic" src="/public/assets/b2blogo.png" alt="b2b logo"/>
+				</a>
 				<div class="flex gap-4">
-					<div>Products</div>
-					<div>Location</div>
-					<div>Contact</div>
+					<div class="cursor-pointer">Products</div>
+					<div class="cursor-pointer">Location</div>
+					<div class="cursor-pointer">Contact</div>
+					<button id="theme-toggle" class="" type="button">
+						<svg
+							id="sun"
+							class="sun"
+							xmlns="http://www.w3.org/2000/svg"
+							width="30"
+							height="30"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="feather feather-sun"
+						>
+							<circle cx="12" cy="12" r="5"></circle>
+							<line x1="12" y1="1" x2="12" y2="3"></line>
+							<line x1="12" y1="21" x2="12" y2="23"></line>
+							<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+							<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+							<line x1="1" y1="12" x2="3" y2="12"></line>
+							<line x1="21" y1="12" x2="23" y2="12"></line>
+							<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+							<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+						</svg>
+						<svg
+							id="moon"
+							class="moon"
+							xmlns="http://www.w3.org/2000/svg"
+							width="30"
+							height="30"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							class="feather feather-moon"
+						>
+							<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+						</svg>
+					</button>
 				</div>
 			</header>
-			<section class="px-8 md:px-12 lg-px-16 py-24">
+			<section class="min-h-[90vh] px-8 md:px-12 lg-px-16 py-24">
 				<!-- Where you import content -->
 				@bodyContent
 			</section>
-			<footer>
-				<hr/>
+			<hr/>
+			<footer class="flex justify-center">
 				<div>Ohio B2Bizzle</div>
 			</footer>
 			<script src="/public/scripts.js"></script>
