@@ -15,4 +15,4 @@ tmux-dev:
     split-window -v \; \
     select-pane -t 0 \; send-keys 'air' C-m \; \
     select-pane -t 1 \; send-keys 'templ generate --watch' C-m \; \
-    select-pane -t 2 \; send-keys 'tailwindcss -i public/input.css -o public/output.css --watch' C-m \; \
+    select-pane -t 2 \; send-keys 'npx tailwindcss -i public/input.css -o public/output.css --watch' C-m \; \
