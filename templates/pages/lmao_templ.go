@@ -29,7 +29,7 @@ func Lmao() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templ.WriteWatchModeString(templ_7745c5c3_Buffer, 1)
+		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString("<div class=\"flex w-full\" id=\"app\"><div class=\"text-4xl\">This is the Lmao page</div><div class=\"bg-red-100 w-20 h-20\"></div><div class=\"w-20 h-20 bg-blue-100\"></div></div>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
