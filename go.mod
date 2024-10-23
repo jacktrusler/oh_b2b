@@ -5,11 +5,11 @@ go 1.23.0
 require (
 	github.com/a-h/templ v0.2.778
 	github.com/labstack/echo/v4 v4.12.0
+	github.com/mattn/go-sqlite3 v1.14.24
 	github.com/stretchr/testify v1.9.0
 )
 
 require (
-	github.com/angelofallars/htmx-go v0.5.0
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/labstack/gommon v0.4.2 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect

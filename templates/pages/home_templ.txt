@@ -1,0 +1,1 @@
+<div class=\"flex w-full\" id=\"app\"><div class=\"bg-black w-20 h-20\"></div><div class=\"w-20 h-20 bg-pink-500\"></div><h1>This is not, the greatest page in the world, no. This is just a tribute</h1><h2>Couldn't remember the greatest page in the world, no. This is a tribute</h2></div>

@@ -15,3 +15,6 @@
 
 # env file
 .env
+
+# ignore the sqlite.db
+*.db
