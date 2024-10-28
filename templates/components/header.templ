@@ -1,37 +1,15 @@
 package components
 
 templ Header() {
+	@AuthDialog("/signup", "signup", "Sign Up")
+	@AuthDialog("/login", "login", "Log In")
 	<header class="flex justify-around items-center">
-		<dialog id="sign-in-dialog" class="border border-gray-400">
-			<button class="pl-2 pt-2 bi bi-escape text-red-700 text-2xl" id="close-button" autofocus></button>
-			<div class="flex flex-col">
-				<form id="login-form" class="px-8">
-					<div class="flex flex-col">
-						<label for="username">Username</label>
-						<input autocomplete="username" type="text" id="username" name="username" placeholder="username"/>
-					</div>
-					<div class="flex flex-col">
-						<label for="password">Password</label>
-						<input autocomplete="current-password" type="text" id="password" name="password" placeholder="password"/>
-					</div>
-					<!-- Submit button with text and a spinner -->
-					<button
-						type="submit"
-						class="relative flex justify-center items-center cursor-pointer w-20 h-8 border border-gray-400 bg-blue-200"
-						id="login-button"
-					>
-						<span id="submit-text">Log in</span>
-						<div id="button-spinner" class="spinner"></div>
-					</button>
-					<div class="h-8" id="login-message"></div>
-				</form>
-			</div>
-		</dialog>
 		<a href="/" id="logo" class="w-10">
 			<img id="logo-pic" src="/public/assets/b2blogo.png" alt="b2b logo"/>
 		</a>
 		<div class="flex items-center gap-4">
-			<button id="sign-in-button" class="border border-gray-400 ">Sign In</button>
+			<button id="signup-button" class="border border-gray-400 ">Sign Up</button>
+			<button id="login-button" class="border border-gray-400">Log In</button>
 			<a href="/lmao" class="cursor-pointer">Lmao</a>
 			<a href="/lmao" class="cursor-pointer">Lmao</a>
 			<button id="theme-toggle" type="button">
@@ -78,4 +56,5 @@ templ Header() {
 			</button>
 		</div>
 	</header>
+	<script src="/public/scripts/header.js"></script>
 }

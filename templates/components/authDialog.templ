@@ -1,0 +1,48 @@
+package components
+
+templ AuthDialog(route, dialogIdType, buttonText string) {
+	<dialog id={ dialogIdType + "-dialog" } class="border border-gray-400">
+		<button class="pl-2 pt-2 bi bi-escape text-red-700 text-2xl" id={ dialogIdType + "-close-button" } autofocus></button>
+		<div class="flex flex-col">
+			<form id={ dialogIdType + "-form" } class="px-8" hx-target={ "#" + dialogIdType + "auth-submit" } hx-post={ route }>
+				<div class=" flex flex-col">
+					<label for="username">Username (3 char minimum)</label>
+					<input minlength="3" required autocomplete="username" type="text" name="username" placeholder="username"/>
+				</div>
+				<div class="flex flex-col">
+					<label for="password">Password (3 char minimum)</label>
+					<input
+						minlength="3"
+						required
+						autocomplete="current-password"
+						type="text"
+						name="password"
+						placeholder="password"
+					/>
+				</div>
+				<div id={ dialogIdType + "auth-submit" }>
+					<input
+						type="submit"
+						value={ buttonText }
+						class="relative flex justify-center items-center cursor-pointer w-20 h-8 border border-gray-400 bg-blue-200"
+					/>
+				</div>
+				<!-- <div id="button-spinner" class="spinner"></div> -->
+				<div class="h-8" id={ dialogIdType + "-message" }></div>
+			</form>
+		</div>
+	</dialog>
+}
+
+templ SuccessMsg(msg string) {
+	<div>{ msg }</div>
+}
+
+templ ErrorMsg(err, buttonText string) {
+	<input
+		type="submit"
+		value={ buttonText }
+		class="relative flex justify-center items-center cursor-pointer w-20 h-8 border border-gray-400 bg-blue-200"
+	/>
+	<div>{ err }</div>
+}
